@@ -19,36 +19,36 @@
 
 /* Contenedor del contenido interno - Limita el ancho máximo */
 .contenido-aside {
-  max-width: 550px; /* Ancho máximo de 550 píxeles */
+  max-width: 500px; /* Ancho máximo de 500 píxeles */
   width: 100%; /* Ocupa el 100% del espacio disponible hasta el máximo */
-  margin-left: 5rem; /* Margen izquierdo para separar del borde */
+  margin-left: 4rem; /* Margen izquierdo para separar del borde */
 }
 
 /* Título principal del aside */
 .titulo-aside {
-  font-size: 4rem; /* Tamaño de fuente extra grande - 64px */
+  font-size: 3rem; /* Tamaño de fuente - 48px */
   font-weight: 900; /* Peso extra bold */
   font-family: PlayfairDisplay-ExtraBold, Georgia, "Times New Roman", serif; /* Fuente de Mercadona */
   color: #000; /* Color negro */
-  margin-bottom: 2.5rem; /* Espacio inferior de 2.5rem */
-  line-height: 1.1; /* Altura de línea ajustada */
-  letter-spacing: -0.02em; /* Espaciado entre letras negativo */
+  margin-bottom: 1.75rem; /* Espacio inferior de 1.75rem */
+  line-height: 1.15; /* Altura de línea ajustada */
+  letter-spacing: -0.01em; /* Espaciado entre letras negativo */
 }
 
 /* Formulario del código postal - Usa flexbox para alinear input y botón */
 .formulario-codigo-postal {
   display: flex; /* Activa flexbox */
-  gap: 1rem; /* Espacio entre elementos de 1rem */
-  margin-bottom: 2rem; /* Espacio inferior aumentado */
+  gap: 0.75rem; /* Espacio entre elementos reducido */
+  margin-bottom: 1.5rem; /* Espacio inferior */
 }
 
 /* Campo de entrada del código postal */
 .input-postal {
   flex: 1; /* Ocupa todo el espacio disponible */
-  padding: 1.2rem 1.5rem; /* Espaciado interno aumentado */
-  border: 1px solid #ddd; /* Borde gris claro */
-  border-radius: 8px; /* Esquinas más redondeadas */
-  font-size: 1.1rem; /* Tamaño de fuente mayor */
+  padding: 0.9rem 1.25rem; /* Espaciado interno */
+  border: 1px solid #e0e0e0; /* Borde gris claro */
+  border-radius: 6px; /* Esquinas redondeadas */
+  font-size: 1rem; /* Tamaño de fuente estándar */
   background-color: white; /* Fondo blanco */
   color: #999; /* Color del placeholder */
 }
@@ -62,16 +62,16 @@
 
 /* Botón de entrar */
 .boton-entrar {
-  padding: 1.2rem 3.5rem; /* Espaciado interno del botón aumentado */
+  padding: 0.9rem 2.5rem; /* Espaciado interno del botón */
   background-color: #00a650; /* Color verde característico de Mercadona */
   color: white; /* Texto blanco */
   border: none; /* Sin borde */
-  border-radius: 8px; /* Esquinas más redondeadas */
+  border-radius: 6px; /* Esquinas redondeadas */
   font-weight: 700; /* Texto en negrita */
-  font-size: 1.1rem; /* Tamaño de fuente mayor */
+  font-size: 1rem; /* Tamaño de fuente estándar */
   cursor: pointer; /* Cambia el cursor a manita al pasar por encima */
   transition: background-color 0.3s; /* Transición suave del color de fondo */
-  letter-spacing: 0.05em; /* Espaciado entre letras */
+  letter-spacing: 0.03em; /* Espaciado entre letras */
 }
 
 /* Efecto hover del botón (cuando pasas el mouse por encima) */
@@ -82,20 +82,20 @@
 /* Texto descriptivo de la app */
 .texto-aside {
   color: #666; /* Color gris medio */
-  margin-bottom: 2rem; /* Espacio inferior aumentado */
-  font-size: 1.05rem; /* Tamaño de fuente aumentado */
-  line-height: 1.6; /* Altura de línea para mejor legibilidad */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+  font-size: 0.95rem; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea para mejor legibilidad */
 }
 
 /* Contenedor de botones de las apps */
 .botones-app {
   display: flex; /* Activa flexbox */
-  gap: 1.2rem; /* Espacio entre botones aumentado */
+  gap: 0.75rem; /* Espacio entre botones */
 }
 
 /* Insignias/badges de las apps (imágenes) */
 .insignia-app {
-  height: 70px; /* Altura aumentada a 70 píxeles */
+  height: 55px; /* Altura de 55 píxeles */
   cursor: pointer; /* Cambia el cursor a manita */
   transition: transform 0.2s; /* Transición suave para el efecto de escala */
 }

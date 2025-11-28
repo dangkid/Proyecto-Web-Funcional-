@@ -4,26 +4,28 @@
 .contenedor-footer {
   background-color: #1a2e35; /* Color de fondo azul oscuro */
   color: white; /* Texto en color blanco */
-  padding: 3rem 2rem 1rem; /* Espaciado: 3rem arriba, 2rem laterales, 1rem abajo */
+  padding: 2.5rem 0 0 0; /* Sin padding lateral, solo superior */
+  margin: 0;
 }
 
 /* Contenido principal del footer - Usa CSS Grid para crear columnas */
 .contenido-footer {
-  max-width: 1400px; /* Ancho máximo aumentado para mejor distribución */
+  max-width: 1200px; /* Ancho máximo */
   margin: 0 auto; /* Centra el contenedor horizontalmente */
   display: grid; /* Activa CSS Grid */
   /* Crea 5 columnas: 4 para las secciones de enlaces y 1 para contacto */
   grid-template-columns: repeat(5, 1fr);
-  gap: 3rem; /* Espacio entre columnas de 3rem */
-  margin-bottom: 2rem; /* Espacio inferior */
-  padding: 0 2rem; /* Padding lateral */
+  gap: 2rem; /* Espacio entre columnas */
+  margin-bottom: 2.5rem; /* Espacio inferior */
+  padding: 0 4rem; /* Padding lateral */
 }
 
 /* Título de cada sección del footer (h3) */
 .seccion-footer h3 {
-  font-size: 1.1rem; /* Tamaño de fuente */
-  margin-bottom: 1rem; /* Espacio inferior */
+  font-size: 1rem; /* Tamaño de fuente */
+  margin-bottom: 1.2rem; /* Espacio inferior */
   font-weight: 600; /* Peso de fuente semi-negrita */
+  color: white;
 }
 
 /* Lista de enlaces dentro de cada sección */
@@ -35,15 +37,16 @@
 
 /* Elementos individuales de la lista */
 .seccion-footer li {
-  margin-bottom: 0.75rem; /* Espacio entre elementos de la lista */
+  margin-bottom: 0.6rem; /* Espacio entre elementos de la lista */
 }
 
 /* Enlaces dentro de las secciones del footer */
 .seccion-footer a {
-  color: #b8c5cc; /* Color gris azulado claro */
+  color: #8a9ca5; /* Color gris azulado claro */
   text-decoration: none; /* Sin subrayado */
-  font-size: 0.95rem; /* Tamaño de fuente ligeramente menor */
+  font-size: 0.875rem; /* Tamaño de fuente ligeramente menor */
   transition: color 0.3s; /* Transición suave del color */
+  line-height: 1.6;
 }
 
 /* Efecto hover de los enlaces (cuando pasas el mouse) */
@@ -64,21 +67,21 @@
 .contenedor-telefono {
   display: flex; /* Activa flexbox */
   align-items: center; /* Alinea verticalmente al centro */
-  gap: 0.8rem; /* Espacio entre icono y número */
-  margin-bottom: 1rem; /* Espacio inferior */
+  gap: 0.6rem; /* Espacio entre icono y número */
+  margin-bottom: 1.2rem; /* Espacio inferior */
 }
 
 /* Icono del teléfono (imagen) */
 .icono-telefono {
-  width: 50px; /* Ancho del icono */
-  height: 50px; /* Altura del icono */
+  width: 40px; /* Ancho del icono */
+  height: 40px; /* Altura del icono */
   object-fit: contain; /* Mantiene las proporciones de la imagen */
 }
 
 /* Número de teléfono */
 .numero-telefono {
-  font-size: 1.75rem; /* Tamaño ajustado para coincidir con la captura */
-  font-weight: bold; /* Texto en negrita */
+  font-size: 1.5rem; /* Tamaño ajustado para coincidir con la captura */
+  font-weight: 700; /* Texto en negrita */
   margin: 0; /* Sin margen */
   line-height: 1; /* Altura de línea ajustada */
   white-space: nowrap; /* Evita que el número se divida en líneas */
@@ -88,8 +91,8 @@
 .iconos-sociales {
   display: flex; /* Activa flexbox */
   justify-content: flex-start; /* Alinea los iconos a la izquierda */
-  gap: 1rem; /* Espacio entre iconos */
-  font-size: 1.75rem; /* Tamaño de los iconos ajustado */
+  gap: 0.8rem; /* Espacio entre iconos */
+  font-size: 1.25rem; /* Tamaño de los iconos ajustado */
 }
 
 /* Enlaces de iconos sociales */
@@ -108,31 +111,32 @@
 
 /* Parte inferior del footer con copyright y enlaces legales */
 .footer-inferior {
-  max-width: 1400px; /* Ancho máximo */
+  max-width: 1200px; /* Ancho máximo */
   margin: 0 auto; /* Centra horizontalmente */
-  padding: 2rem 4rem 1rem; /* Espaciado superior y lateral */
+  padding: 1.5rem 4rem 1.5rem; /* Espaciado superior y lateral */
   border-top: 1px solid #2a4048; /* Borde superior para separar visualmente */
   display: flex; /* Activa flexbox */
   justify-content: space-between; /* Espacia los elementos a los extremos */
   align-items: center; /* Alinea verticalmente al centro */
   flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
   gap: 1rem; /* Espacio entre elementos */
-  font-size: 0.85rem; /* Tamaño de fuente pequeño */
-  color: #8a9ca5; /* Color gris azulado */
+  font-size: 0.75rem; /* Tamaño de fuente pequeño */
+  color: #6b7c85; /* Color gris azulado */
 }
 
 /* Contenedor de enlaces legales */
 .enlaces-footer {
   display: flex; /* Activa flexbox */
-  gap: 1.5rem; /* Espacio entre enlaces */
+  gap: 1.2rem; /* Espacio entre enlaces */
   flex-wrap: wrap; /* Permite envolver en pantallas pequeñas */
 }
 
 /* Enlaces legales */
 .enlaces-footer a {
-  color: #8a9ca5; /* Color gris azulado */
+  color: #6b7c85; /* Color gris azulado */
   text-decoration: underline; /* Con subrayado */
   transition: color 0.3s; /* Transición suave del color */
+  font-size: 0.75rem;
 }
 
 /* Efecto hover de enlaces legales */

@@ -1,0 +1,20 @@
+# Dependencias - Node modules
+node_modules/
+*/node_modules/
+
+# Archivos de bloqueo (opcional, depende del equipo)
+package-lock.json
+
+# Archivos del sistema
+.DS_Store
+*.log
+
+# Build outputs
+dist/
+dist-ssr/
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea

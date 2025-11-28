@@ -37,11 +37,11 @@ function Aside() {
         <div className="botones-app">
           {/* Enlace a Google Play Store */}
           <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
-            <img src="/images/icons/google-play.png" alt="Google Play" className="insignia-app" />
+            <img src="/images/icons/GooglePlay.svg" alt="Google Play" className="insignia-app" />
           </a>
           {/* Enlace a Apple App Store */}
           <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
-            <img src="/images/icons/app-store.png" alt="App Store" className="insignia-app" />
+            <img src="/images/icons/AppStore.svg" alt="App Store" className="insignia-app" />
           </a>
         </div>
       </div>

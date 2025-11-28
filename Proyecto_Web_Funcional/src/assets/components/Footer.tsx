@@ -1,5 +1,9 @@
 // Importamos los estilos CSS del componente Footer
 import './Footer.css';
+// Importamos los iconos de react-icons
+import { MdHeadsetMic, MdEmail } from 'react-icons/md';
+import { FaFacebookF, FaYoutube, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 // Componente Footer: Muestra el pie de página con información de la empresa,
 // enlaces importantes, redes sociales y datos de contacto
@@ -51,19 +55,34 @@ function Footer() {
 
         {/* Sección 5: Información de contacto y redes sociales */}
         <div className="seccion-footer contacto">
-          {/* Icono de teléfono */}
-          <div className="icono-telefono">📞</div>
-          {/* Número de teléfono principal */}
-          <h2 className="numero-telefono">800 500 220</h2>
+          {/* Contenedor del teléfono con icono y número en línea */}
+          <div className="contenedor-telefono">
+            {/* Icono de call center */}
+            <img src="/images/icons/call-center.png" alt="Call Center" className="icono-telefono" />
+            {/* Número de teléfono principal */}
+            <h2 className="numero-telefono">800 500 220</h2>
+          </div>
           {/* Contenedor de iconos de redes sociales */}
           <div className="iconos-sociales">
             {/* aria-label ayuda a la accesibilidad para lectores de pantalla */}
-            <a href="mailto:info@mercadona.com" aria-label="Email">✉️</a>
-            <a href="#facebook" aria-label="Facebook">f</a>
-            <a href="#twitter" aria-label="Twitter">𝕏</a>
-            <a href="#youtube" aria-label="YouTube">▶️</a>
-            <a href="#instagram" aria-label="Instagram">📷</a>
-            <a href="#linkedin" aria-label="LinkedIn">in</a>
+            <a href="mailto:info@mercadona.com" aria-label="Email">
+              <MdEmail />
+            </a>
+            <a href="#facebook" aria-label="Facebook">
+              <FaFacebookF />
+            </a>
+            <a href="#twitter" aria-label="Twitter">
+              <FaXTwitter />
+            </a>
+            <a href="#youtube" aria-label="YouTube">
+              <FaYoutube />
+            </a>
+            <a href="#instagram" aria-label="Instagram">
+              <FaInstagram />
+            </a>
+            <a href="#linkedin" aria-label="LinkedIn">
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
       </div>

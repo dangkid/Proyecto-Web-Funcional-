@@ -1,0 +1,143 @@
+/* Estilos del componente Footer */
+
+/* Contenedor principal del footer con fondo oscuro */
+.contenedor-footer {
+  background-color: #1a2e35; /* Color de fondo azul oscuro */
+  color: white; /* Texto en color blanco */
+  padding: 3rem 2rem 1rem; /* Espaciado: 3rem arriba, 2rem laterales, 1rem abajo */
+}
+
+/* Contenido principal del footer - Usa CSS Grid para crear columnas */
+.contenido-footer {
+  max-width: 1200px; /* Ancho máximo de 1200 píxeles */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  display: grid; /* Activa CSS Grid */
+  /* Crea columnas automáticas que se adaptan al espacio disponible */
+  /* Cada columna tiene un mínimo de 200px y un máximo de 1 fracción del espacio */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem; /* Espacio entre columnas de 2rem */
+  margin-bottom: 2rem; /* Espacio inferior */
+}
+
+/* Título de cada sección del footer (h3) */
+.seccion-footer h3 {
+  font-size: 1.1rem; /* Tamaño de fuente */
+  margin-bottom: 1rem; /* Espacio inferior */
+  font-weight: 600; /* Peso de fuente semi-negrita */
+}
+
+/* Lista de enlaces dentro de cada sección */
+.seccion-footer ul {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0; /* Sin espaciado interno */
+  margin: 0; /* Sin margen */
+}
+
+/* Elementos individuales de la lista */
+.seccion-footer li {
+  margin-bottom: 0.75rem; /* Espacio entre elementos de la lista */
+}
+
+/* Enlaces dentro de las secciones del footer */
+.seccion-footer a {
+  color: #b8c5cc; /* Color gris azulado claro */
+  text-decoration: none; /* Sin subrayado */
+  font-size: 0.95rem; /* Tamaño de fuente ligeramente menor */
+  transition: color 0.3s; /* Transición suave del color */
+}
+
+/* Efecto hover de los enlaces (cuando pasas el mouse) */
+.seccion-footer a:hover {
+  color: white; /* Cambia a blanco al pasar el mouse */
+}
+
+/* Sección de contacto - centrada */
+.seccion-footer.contacto {
+  text-align: center; /* Centra el texto */
+}
+
+/* Icono del teléfono */
+.icono-telefono {
+  font-size: 2rem; /* Tamaño grande del icono */
+  margin-bottom: 0.5rem; /* Espacio inferior */
+}
+
+/* Número de teléfono */
+.numero-telefono {
+  font-size: 1.8rem; /* Tamaño grande para destacar */
+  font-weight: bold; /* Texto en negrita */
+  margin: 0.5rem 0 1rem; /* Márgenes superior e inferior */
+}
+
+/* Contenedor de iconos de redes sociales */
+.iconos-sociales {
+  display: flex; /* Activa flexbox */
+  justify-content: center; /* Centra los iconos horizontalmente */
+  gap: 1rem; /* Espacio entre iconos */
+  font-size: 1.5rem; /* Tamaño de los iconos */
+}
+
+/* Enlaces de iconos sociales */
+.iconos-sociales a {
+  color: white; /* Color blanco */
+  transition: transform 0.3s; /* Transición suave para el efecto de escala */
+}
+
+/* Efecto hover de los iconos sociales */
+.iconos-sociales a:hover {
+  transform: scale(1.2); /* Aumenta el tamaño un 20% al pasar el mouse */
+}
+
+/* Parte inferior del footer con copyright y enlaces legales */
+.footer-inferior {
+  max-width: 1200px; /* Ancho máximo */
+  margin: 0 auto; /* Centra horizontalmente */
+  padding-top: 2rem; /* Espaciado superior */
+  border-top: 1px solid #2a4048; /* Borde superior para separar visualmente */
+  display: flex; /* Activa flexbox */
+  justify-content: space-between; /* Espacia los elementos a los extremos */
+  align-items: center; /* Alinea verticalmente al centro */
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+  gap: 1rem; /* Espacio entre elementos */
+  font-size: 0.85rem; /* Tamaño de fuente pequeño */
+  color: #8a9ca5; /* Color gris azulado */
+}
+
+/* Contenedor de enlaces legales */
+.enlaces-footer {
+  display: flex; /* Activa flexbox */
+  gap: 1.5rem; /* Espacio entre enlaces */
+  flex-wrap: wrap; /* Permite envolver en pantallas pequeñas */
+}
+
+/* Enlaces legales */
+.enlaces-footer a {
+  color: #8a9ca5; /* Color gris azulado */
+  text-decoration: underline; /* Con subrayado */
+  transition: color 0.3s; /* Transición suave del color */
+}
+
+/* Efecto hover de enlaces legales */
+.enlaces-footer a:hover {
+  color: white; /* Cambia a blanco al pasar el mouse */
+}
+
+/* Media query para dispositivos móviles (pantallas menores a 768px) */
+@media (max-width: 768px) {
+  /* En móviles, el contenido del footer se apila en una sola columna */
+  .contenido-footer {
+    grid-template-columns: 1fr; /* Una sola columna */
+    text-align: center; /* Centra el texto */
+  }
+
+  /* La parte inferior también se apila verticalmente */
+  .footer-inferior {
+    flex-direction: column; /* Dirección vertical */
+    text-align: center; /* Centra el texto */
+  }
+
+  /* Los enlaces legales se centran en móviles */
+  .enlaces-footer {
+    justify-content: center; /* Centra los enlaces */
+  }
+}

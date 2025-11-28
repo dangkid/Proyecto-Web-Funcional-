@@ -1,0 +1,112 @@
+/* Estilos del componente Aside */
+
+/* Contenedor principal del aside - Usa flexbox para centrar el contenido */
+.contenedor-aside {
+  background-color: #f5f5f5; /* Color de fondo gris claro */
+  padding: 3rem 2rem; /* Espaciado interno: 3rem arriba/abajo, 2rem izquierda/derecha */
+  min-height: 400px; /* Altura mínima de 400 píxeles */
+  display: flex; /* Activa flexbox */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+/* Contenedor del contenido interno - Limita el ancho máximo */
+.contenido-aside {
+  max-width: 500px; /* Ancho máximo de 500 píxeles */
+  width: 100%; /* Ocupa el 100% del espacio disponible hasta el máximo */
+}
+
+/* Título principal del aside */
+.titulo-aside {
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  font-weight: bold; /* Texto en negrita */
+  color: #000; /* Color negro */
+  margin-bottom: 2rem; /* Espacio inferior de 2rem */
+  line-height: 1.2; /* Altura de línea para mejor legibilidad */
+}
+
+/* Formulario del código postal - Usa flexbox para alinear input y botón */
+.formulario-codigo-postal {
+  display: flex; /* Activa flexbox */
+  gap: 1rem; /* Espacio entre elementos de 1rem */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+}
+
+/* Campo de entrada del código postal */
+.input-postal {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  padding: 1rem 1.5rem; /* Espaciado interno */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 4px; /* Esquinas redondeadas */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  background-color: white; /* Fondo blanco */
+}
+
+/* Efecto cuando el input está enfocado (al hacer clic) */
+.input-postal:focus {
+  outline: none; /* Quita el borde predeterminado del navegador */
+  border-color: #00a650; /* Cambia el borde al color verde de Mercadona */
+}
+
+/* Botón de entrar */
+.boton-entrar {
+  padding: 1rem 2.5rem; /* Espaciado interno del botón */
+  background-color: #00a650; /* Color verde característico de Mercadona */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Esquinas redondeadas */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 1rem; /* Tamaño de fuente estándar */
+  cursor: pointer; /* Cambia el cursor a manita al pasar por encima */
+  transition: background-color 0.3s; /* Transición suave del color de fondo */
+}
+
+/* Efecto hover del botón (cuando pasas el mouse por encima) */
+.boton-entrar:hover {
+  background-color: #008f44; /* Verde más oscuro al pasar el mouse */
+}
+
+/* Texto descriptivo de la app */
+.texto-aside {
+  color: #666; /* Color gris medio */
+  margin-bottom: 1.5rem; /* Espacio inferior */
+  font-size: 0.95rem; /* Tamaño de fuente ligeramente menor */
+  line-height: 1.5; /* Altura de línea para mejor legibilidad */
+}
+
+/* Contenedor de botones de las apps */
+.botones-app {
+  display: flex; /* Activa flexbox */
+  gap: 1rem; /* Espacio entre botones */
+}
+
+/* Insignias/badges de las apps (imágenes) */
+.insignia-app {
+  height: 50px; /* Altura fija de 50 píxeles */
+  cursor: pointer; /* Cambia el cursor a manita */
+  transition: transform 0.2s; /* Transición suave para el efecto de escala */
+}
+
+/* Efecto hover de las insignias de apps */
+.insignia-app:hover {
+  transform: scale(1.05); /* Aumenta el tamaño un 5% al pasar el mouse */
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  /* Reduce el tamaño del título en móviles */
+  .titulo-aside {
+    font-size: 2rem;
+  }
+
+  /* Coloca el formulario en columna en móviles */
+  .formulario-codigo-postal {
+    flex-direction: column;
+  }
+
+  /* Coloca los botones de app en columna en móviles */
+  .botones-app {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,138 +1,180 @@
+/* --- IMPORTANTE: Importamos la fuente (peso 900 para negrita) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
 /* Estilos del componente Aside */
 
-/* Contenedor principal del aside - Usa flexbox para centrar el contenido */
+/* Contenedor principal */
 .contenedor-aside {
-  background-color: #f3f2ee; /* Color de fondo beige claro */
-  background-image: url('/images/banner/empieza-compra.jpg'); /* Imagen de fondo */
-  background-size: 50%; /* La imagen ocupa el 50% del ancho */
-  background-position: right center; /* Posiciona la imagen a la derecha */
-  background-repeat: no-repeat; /* No repite la imagen */
-  padding: 3rem 2rem; /* Espaciado interno: 3rem arriba/abajo, 2rem izquierda/derecha */
-  /* Dimensiones específicas para coincidir con el original */
-  max-width: 1425px; /* Ancho máximo de 1425px */
-  height: 393px; /* Altura fija de 393px */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-  display: flex; /* Activa flexbox */
-  align-items: center; /* Centra verticalmente */
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  background-color: #f3f2ee; 
+  background-image: url('/images/banner/empieza-compra.jpg'); 
+  background-size: 52%; 
+  background-position: right 0px center; 
+  background-repeat: no-repeat; 
+  padding: 4rem 0; 
+  width: 100%; 
+  height: 430px; 
+  margin: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
 }
 
-/* Contenedor del contenido interno - Limita el ancho máximo */
+/* Contenedor del contenido interno */
 .contenido-aside {
-  max-width: 500px; /* Ancho máximo de 500 píxeles */
-  width: 100%; /* Ocupa el 100% del espacio disponible hasta el máximo */
-  margin-left: 4rem; /* Margen izquierdo para separar del borde */
+  /* Ancho aumentado para que "Empieza tu compra" quepa en una línea */
+  max-width: 520px; 
+  width: 100%; 
+  /* Margen izquierdo ajustado para la posición horizontal respecto al borde */
+  margin-left: 12%; 
+  padding: 0 2rem; 
+  display: flex;
+  flex-direction: column;
 }
 
 /* Título principal del aside */
 .titulo-aside {
-  font-size: 3rem; /* Tamaño de fuente - 48px */
-  font-weight: 900; /* Peso extra bold */
-  font-family: PlayfairDisplay-ExtraBold, Georgia, "Times New Roman", serif; /* Fuente de Mercadona */
-  color: #000; /* Color negro */
-  margin-bottom: 1.75rem; /* Espacio inferior de 1.75rem */
-  line-height: 1.15; /* Altura de línea ajustada */
-  letter-spacing: -0.01em; /* Espaciado entre letras negativo */
+  /* Tamaño de fuente reducido */
+  font-size: 2.8rem; 
+  /* Peso máximo de negrita */
+  font-weight: 900; 
+  font-family: 'Playfair Display', serif; 
+  color: #000; 
+  /* Margen inferior */
+  margin-bottom: 1.5rem; 
+  /* Line-height ajustado */
+  line-height: 1.15; 
+  letter-spacing: -0.02em; 
+  /* Sombra para ese "extra" de negrita y densidad visual */
+  text-shadow: 0 0 0.8px rgba(0, 0, 0, 0.4); 
+  /* Ancho máximo para forzar el salto después de "compra" */
+  max-width: 400px;
 }
 
-/* Formulario del código postal - Usa flexbox para alinear input y botón */
+/* Formulario del código postal */
 .formulario-codigo-postal {
-  display: flex; /* Activa flexbox */
-  gap: 0.75rem; /* Espacio entre elementos reducido */
-  margin-bottom: 1.5rem; /* Espacio inferior */
+  display: flex; 
+  gap: 0.8rem; 
+  /* Espaciado ajustado */
+  margin-bottom: 1.25rem; 
+  align-items: center; 
 }
 
-/* Campo de entrada del código postal */
+/* Campo de entrada del código postal - ESTILO FLOTANTE Y BORDES */
 .input-postal {
-  flex: 1; /* Ocupa todo el espacio disponible */
-  padding: 0.9rem 1.25rem; /* Espaciado interno */
-  border: 1px solid #e0e0e0; /* Borde gris claro */
-  border-radius: 6px; /* Esquinas redondeadas */
-  font-size: 1rem; /* Tamaño de fuente estándar */
-  background-color: white; /* Fondo blanco */
-  color: #999; /* Color del placeholder */
+  flex: 1; 
+  padding: 0 1rem; 
+  height: 50px; 
+  border: none; 
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border-radius: 8px; 
+  font-size: 1rem; 
+  background-color: white; 
+  color: #000; 
+  font-weight: 400;
+  transition: box-shadow 0.2s ease-in-out;
 }
 
-/* Efecto cuando el input está enfocado (al hacer clic) */
+/* Placeholder (el texto de ayuda) más claro y ajustado */
+.input-postal::placeholder {
+  color: #b0b0b0;
+}
+
+/* Efecto focus del input */
 .input-postal:focus {
-  outline: none; /* Quita el borde predeterminado del navegador */
-  border-color: #00a650; /* Cambia el borde al color verde de Mercadona */
-  color: #000; /* Color del texto cuando está enfocado */
+  outline: none; 
+  box-shadow: 0 0 0 2px #00a650; 
 }
 
 /* Botón de entrar */
 .boton-entrar {
-  padding: 0.9rem 2.5rem; /* Espaciado interno del botón */
-  background-color: #00a650; /* Color verde característico de Mercadona */
-  color: white; /* Texto blanco */
-  border: none; /* Sin borde */
-  border-radius: 6px; /* Esquinas redondeadas */
-  font-weight: 700; /* Texto en negrita */
-  font-size: 1rem; /* Tamaño de fuente estándar */
-  cursor: pointer; /* Cambia el cursor a manita al pasar por encima */
-  transition: background-color 0.3s; /* Transición suave del color de fondo */
-  letter-spacing: 0.03em; /* Espaciado entre letras */
+  height: 50px; 
+  padding: 0 2.5rem; 
+  background-color: #00a650; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  font-weight: 700; 
+  font-size: 0.95rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  letter-spacing: 0.07em; 
+  white-space: nowrap; 
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); 
 }
 
-/* Efecto hover del botón (cuando pasas el mouse por encima) */
+/* Efecto hover del botón */
 .boton-entrar:hover {
-  background-color: #008f44; /* Verde más oscuro al pasar el mouse */
+  background-color: #008f44; 
 }
 
 /* Texto descriptivo de la app */
 .texto-aside {
-  color: #666; /* Color gris medio */
-  margin-bottom: 1.5rem; /* Espacio inferior */
-  font-size: 0.95rem; /* Tamaño de fuente */
-  line-height: 1.5; /* Altura de línea para mejor legibilidad */
+  color: #666; 
+  /* Margen inferior ajustado */
+  margin-bottom: 1.25rem; 
+  font-size: 0.95rem; 
+  line-height: 1.4; 
+  font-weight: 400;
+  /* Ancho para que el texto rompa "naturalmente" antes de "cualquier momento" */
+  max-width: 280px; 
 }
 
 /* Contenedor de botones de las apps */
 .botones-app {
-  display: flex; /* Activa flexbox */
-  gap: 0.75rem; /* Espacio entre botones */
+  display: flex; 
+  gap: 0.75rem; 
+  align-items: center;
 }
 
 /* Insignias/badges de las apps (imágenes) */
 .insignia-app {
-  height: 55px; /* Altura de 55 píxeles */
-  cursor: pointer; /* Cambia el cursor a manita */
-  transition: transform 0.2s; /* Transición suave para el efecto de escala */
+  height: 40px; 
+  width: auto; 
+  cursor: pointer; 
+  transition: transform 0.2s; 
 }
 
-/* Efecto hover de las insignias de apps */
 .insignia-app:hover {
-  transform: scale(1.05); /* Aumenta el tamaño un 5% al pasar el mouse */
+  transform: scale(1.05); 
 }
 
 /* Media query para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
-  /* Ajuste del contenedor en móviles */
   .contenedor-aside {
-    background-size: 0; /* Oculta la imagen en móviles */
-    justify-content: center; /* Centra el contenido en móviles */
-    height: auto; /* Altura automática en móviles */
-    min-height: 400px; /* Altura mínima ajustada */
+    background-size: 0; 
+    justify-content: center; 
+    height: auto; 
+    min-height: 400px; 
+    padding: 3rem 0;
   }
 
-  /* Ajuste del contenido en móviles */
   .contenido-aside {
-    margin-left: 0; /* Elimina el margen izquierdo */
+    margin-left: 0;
+    padding: 0 1.5rem;
+    align-items: center; 
+    text-align: center;
+    max-width: 100%; 
   }
 
-  /* Reduce el tamaño del título en móviles */
   .titulo-aside {
     font-size: 2rem;
+    line-height: 1.15;
+    display: block;
   }
 
-  /* Coloca el formulario en columna en móviles */
   .formulario-codigo-postal {
     flex-direction: column;
+    width: 100%;
+    gap: 1rem;
   }
 
-  /* Coloca los botones de app en columna en móviles */
+  .input-postal, .boton-entrar {
+    width: 100%;
+  }
+
   .botones-app {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; 
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

@@ -1,0 +1,180 @@
+/* Importamos la fuente (peso 900 para negrita) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+/* Estilos del componente Aside */
+
+/* Contenedor principal */
+.contenedor-aside {
+  background-color: #f3f2ee; 
+  background-image: url('/images/banner/empieza-compra.jpg'); 
+  background-size: 52%; 
+  background-position: right 0px center; 
+  background-repeat: no-repeat; 
+  padding: 4rem 0; 
+  width: 100%; 
+  height: 430px; 
+  margin: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+}
+
+/* Contenedor del contenido interno */
+.contenido-aside {
+  /* Ancho aumentado para que "Empieza tu compra" quepa en una línea */
+  max-width: 520px; 
+  width: 100%; 
+  /* Margen izquierdo ajustado para la posición horizontal respecto al borde */
+  margin-left: 12%; 
+  padding: 0 2rem; 
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título principal del aside */
+.titulo-aside {
+  /* Tamaño de fuente reducido */
+  font-size: 2.8rem; 
+  /* Peso máximo de negrita */
+  font-weight: 900; 
+  font-family: 'Playfair Display', serif; 
+  color: #000; 
+  /* Margen inferior */
+  margin-bottom: 1.5rem; 
+  /* Line-height ajustado */
+  line-height: 1.15; 
+  letter-spacing: -0.02em; 
+  /* Sombra para ese "extra" de negrita y densidad visual */
+  text-shadow: 0 0 0.8px rgba(0, 0, 0, 0.4); 
+  /* Ancho máximo para forzar el salto después de "compra" */
+  max-width: 400px;
+}
+
+/* Formulario del código postal */
+.formulario-codigo-postal {
+  display: flex; 
+  gap: 0.8rem; 
+  /* Espaciado ajustado */
+  margin-bottom: 1.25rem; 
+  align-items: center; 
+}
+
+/* Campo de entrada del código postal - ESTILO FLOTANTE Y BORDES */
+.input-postal {
+  flex: 1; 
+  padding: 0 1rem; 
+  height: 50px; 
+  border: none; 
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border-radius: 8px; 
+  font-size: 1rem; 
+  background-color: white; 
+  color: #000; 
+  font-weight: 400;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Placeholder (el texto de ayuda) más claro y ajustado */
+.input-postal::placeholder {
+  color: #b0b0b0;
+}
+
+/* Efecto focus del input */
+.input-postal:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px #00a650; 
+}
+
+/* Botón de entrar */
+.boton-entrar {
+  height: 50px; 
+  padding: 0 2.5rem; 
+  background-color: #00a650; 
+  color: white; 
+  border: none; 
+  border-radius: 8px; 
+  font-weight: 700; 
+  font-size: 0.95rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  letter-spacing: 0.07em; 
+  white-space: nowrap; 
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06); 
+}
+
+/* Efecto hover del botón */
+.boton-entrar:hover {
+  background-color: #008f44; 
+}
+
+/* Texto descriptivo de la app */
+.texto-aside {
+  color: #666; 
+  /* Margen inferior ajustado */
+  margin-bottom: 1.25rem; 
+  font-size: 0.95rem; 
+  line-height: 1.4; 
+  font-weight: 400;
+  /* Ancho para que el texto rompa "naturalmente" antes de "cualquier momento" */
+  max-width: 280px; 
+}
+
+/* Contenedor de botones de las apps */
+.botones-app {
+  display: flex; 
+  gap: 0.75rem; 
+  align-items: center;
+}
+
+/* Insignias/badges de las apps (imágenes) */
+.insignia-app {
+  height: 40px; 
+  width: auto; 
+  cursor: pointer; 
+  transition: transform 0.2s; 
+}
+
+.insignia-app:hover {
+  transform: scale(1.05); 
+}
+
+/* Media query para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .contenedor-aside {
+    background-size: 0; 
+    justify-content: center; 
+    height: auto; 
+    min-height: 400px; 
+    padding: 3rem 0;
+  }
+
+  .contenido-aside {
+    margin-left: 0;
+    padding: 0 1.5rem;
+    align-items: center; 
+    text-align: center;
+    max-width: 100%; 
+  }
+
+  .titulo-aside {
+    font-size: 2rem;
+    line-height: 1.15;
+    display: block;
+  }
+
+  .formulario-codigo-postal {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .input-postal, .boton-entrar {
+    width: 100%;
+  }
+
+  .botones-app {
+    flex-direction: row; 
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}

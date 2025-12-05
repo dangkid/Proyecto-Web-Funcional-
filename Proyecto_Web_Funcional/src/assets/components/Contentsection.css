@@ -1,0 +1,117 @@
+/* Importar fuente Playfair Display para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+/* Contenedor principal de las secciones de contenido */
+.contenedor-contentsection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cada sección individual de contenido */
+.seccion-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1425px;
+  min-height: 430px;
+  margin: 0 auto;
+  padding: 64px 128px;
+  gap: 4rem;
+}
+
+/* Sección invertida (texto a la izquierda, imagen a la derecha) */
+.seccion-contenido.invertido {
+  flex-direction: row;
+  background-color: #f6f7f6;
+  padding: 64px 128px;
+  max-width: 100%;
+  min-height: 430px;
+}
+
+.seccion-contenido.invertido > * {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Contenedor del texto */
+.texto-contenido {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* Título de la sección */
+.titulo-contenido {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Descripción de la sección */
+.descripcion-contenido {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Enlace "Avísame" */
+.enlace-avisame {
+  color: #00a650;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s;
+}
+
+.enlace-avisame:hover {
+  border-bottom: 2px solid #00a650;
+}
+
+/* Contenedor de la imagen */
+.imagen-contenido {
+  flex: 1;
+  max-width: 525px;
+}
+
+/* Imagen de la sección */
+.img-contenido {
+  width: 525px;
+  height: 302px;
+  object-fit: cover;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .seccion-contenido {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .seccion-contenido.invertido {
+    flex-direction: column;
+  }
+
+  .texto-contenido {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .titulo-contenido {
+    font-size: 2rem;
+  }
+
+  .descripcion-contenido {
+    font-size: 1rem;
+  }
+
+  .imagen-contenido {
+    max-width: 100%;
+  }
+}

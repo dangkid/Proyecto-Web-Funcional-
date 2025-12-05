@@ -1,4 +1,5 @@
 // Importamos los componentes que hemos creado
+import Contentsection from './assets/components/Contentsection'
 import Aside from './assets/components/Aside'
 import Footer from './assets/components/Footer'
 import './App.css'
@@ -7,6 +8,8 @@ import './App.css'
 function App() {
   return (
     <>
+      {/* Renderizamos el componente Contentsection */}
+      <Contentsection />
       {/* Renderizamos el componente Aside */}
       <Aside />
       {/* Renderizamos el componente Footer */}

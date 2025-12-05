@@ -15,19 +15,19 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1425px;
-  min-height: 398px;
+  min-height: 300px;
   margin: 0 auto;
-  padding: 4rem 8rem;
+  padding: 2.5rem 8rem;
   gap: 4rem;
 }
 
-/* Sección invertida (texto a la izquierda, imagen a la derecha) */
+/* Sección invertida (imagen a la izquierda, texto a la derecha) */
 .seccion-contenido.invertido {
-  flex-direction: row;
+  flex-direction: row-reverse;
   background-color: #f6f7f6;
-  padding: 4rem 8rem;
+  padding: 2.5rem 8rem;
   max-width: 100%;
-  min-height: 398px;
+  min-height: 300px;
 }
 
 .seccion-contenido.invertido > * {
@@ -38,31 +38,31 @@
 /* Contenedor del texto */
 .texto-contenido {
   flex: 1;
-  max-width: 500px;
+  max-width: 525px;
 }
 
 /* Título de la sección */
 .titulo-contenido {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #000;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
   line-height: 1.2;
 }
 
 /* Descripción de la sección */
 .descripcion-contenido {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #666;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 
 /* Enlace "Avísame" */
 .enlace-avisame {
   color: #00a650;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   text-decoration: none;
   border-bottom: 2px solid transparent;
@@ -86,32 +86,107 @@
   object-fit: cover;
 }
 
-/* Media query para dispositivos móviles */
-@media (max-width: 768px) {
+/* Media query para tablets */
+@media (max-width: 1024px) {
   .seccion-contenido {
-    flex-direction: column;
-    padding: 3rem 1.5rem;
-    gap: 2rem;
+    padding: 3rem 2rem;
+    gap: 3rem;
   }
 
   .seccion-contenido.invertido {
-    flex-direction: column;
-  }
-
-  .texto-contenido {
-    max-width: 100%;
-    text-align: center;
+    padding: 3rem 2rem;
   }
 
   .titulo-contenido {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .descripcion-contenido {
     font-size: 1rem;
   }
 
+  .img-contenido {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Media query para móviles grandes */
+@media (max-width: 768px) {
+  .seccion-contenido {
+    flex-direction: column;
+    padding: 3rem 1rem;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .seccion-contenido.invertido {
+    flex-direction: column;
+    padding: 3rem 1rem;
+    min-height: auto;
+  }
+
+  .texto-contenido {
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    padding: 0 1rem;
+  }
+
+  .titulo-contenido {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .descripcion-contenido {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .enlace-avisame {
+    font-size: 1rem;
+  }
+
   .imagen-contenido {
     max-width: 100%;
+    width: 100%;
+  }
+
+  .img-contenido {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Media query para móviles pequeños */
+@media (max-width: 480px) {
+  .seccion-contenido {
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .seccion-contenido.invertido {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .texto-contenido {
+    padding: 0 0.5rem;
+    text-align: left;
+  }
+
+  .titulo-contenido {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .descripcion-contenido {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .enlace-avisame {
+    font-size: 1rem;
   }
 }

@@ -13,6 +13,19 @@
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  /* Variables CSS para consistencia en el diseño */
+  --color-primary: #00a650;
+  --color-primary-dark: #008f44;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-background: #ffffff;
+  --color-background-light: #f6f7f6;
+  --max-width: 1400px;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --border-radius: 8px;
 }
 
 /* Estilos del body - sin centrado porque usamos nuestro propio layout */
@@ -21,8 +34,9 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #ffffff;
-  color: #333;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  overflow-x: hidden; /* Previene scroll horizontal */
 }
 
 /* Estilos de enlaces globales */
@@ -53,5 +67,60 @@ ul, ol {
   flex-direction: column;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
+
+/* Contenedor responsive general */
+.contenedor {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Media queries para contenedor responsive */
+@media (max-width: 1024px) {
+  .contenedor {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 0 1rem;
+  }
+  
+  /* Ajustar tamaños de fuente en móviles */
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Utilidades responsive */
+.ocultar-movil {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .ocultar-movil {
+    display: none;
+  }
+}
+
+.mostrar-movil {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mostrar-movil {
+    display: block;
+  }
+}
+
 

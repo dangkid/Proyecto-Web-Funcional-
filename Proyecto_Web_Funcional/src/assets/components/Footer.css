@@ -7,7 +7,7 @@
 .contenedor-footer {
   background-color: #1c3037; /* Color de fondo azul oscuro verdoso como en la imagen */
   color: white; /* Texto en color blanco */
-  padding: 2.5rem 0 0 0; /* Padding superior reducido */
+  padding: 3rem 0 0 0; /* Padding superior aumentado */
   margin: 0;
   font-family: 'Muli', sans-serif; /* Fuente Muli */
 }
@@ -163,22 +163,123 @@
   color: white; /* Cambia a blanco al pasar el mouse */
 }
 
-/* Media query para dispositivos móviles (pantallas menores a 768px) */
-@media (max-width: 768px) {
-  /* En móviles, el contenido del footer se apila en una sola columna */
+/* Media query para tablets grandes */
+@media (max-width: 1200px) {
   .contenido-footer {
-    grid-template-columns: 1fr; /* Una sola columna */
-    text-align: center; /* Centra el texto */
+    gap: 2rem;
+    padding: 0 4rem;
   }
 
-  /* La parte inferior también se apila verticalmente */
   .footer-inferior {
-    flex-direction: column; /* Dirección vertical */
-    text-align: center; /* Centra el texto */
+    padding: 1.5rem 4rem;
+  }
+}
+
+/* Media query para tablets */
+@media (max-width: 1024px) {
+  .contenido-footer {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 3rem;
   }
 
-  /* Los enlaces legales se centran en móviles */
+  .seccion-footer.contacto {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .contenedor-telefono {
+    justify-content: center;
+  }
+
+  .iconos-sociales {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .footer-inferior {
+    padding: 1.5rem 3rem;
+  }
+}
+
+/* Media query para tablets pequeñas */
+@media (max-width: 768px) {
+  .contenido-footer {
+    grid-template-columns: repeat(2, 1fr);
+    text-align: left;
+    gap: 2rem;
+    padding: 0 2rem;
+  }
+
+  .seccion-footer.contacto {
+    grid-column: 1 / -1;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-inferior {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
   .enlaces-footer {
-    justify-content: center; /* Centra los enlaces */
+    justify-content: center;
+    gap: 1rem;
+  }
+}
+
+/* Media query para móviles */
+@media (max-width: 480px) {
+  .contenido-footer {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .seccion-footer h3 {
+    font-size: 15px;
+    margin-bottom: 0.75rem;
+  }
+
+  .seccion-footer a {
+    font-size: 14px;
+  }
+
+  .seccion-footer li {
+    margin-bottom: 0.4rem;
+  }
+
+  .numero-telefono {
+    font-size: 24px;
+  }
+
+  .icono-telefono {
+    width: 40px;
+    height: 40px;
+  }
+
+  .iconos-sociales a svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-inferior {
+    padding: 1.5rem 1.5rem;
+    font-size: 11px;
+  }
+
+  .enlaces-footer {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+  }
+
+  .enlaces-footer a {
+    font-size: 11px;
   }
 }

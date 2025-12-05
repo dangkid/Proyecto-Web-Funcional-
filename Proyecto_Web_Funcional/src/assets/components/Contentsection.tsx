@@ -24,13 +24,6 @@ function Contentsection() {
 
       {/* Segunda sección: Nueva tienda online */}
       <div className="seccion-contenido invertido">
-        <div className="imagen-contenido">
-          <img 
-            src="/images/banner/nueva-tienda.jpeg" 
-            alt="Nueva tienda online" 
-            className="img-contenido"
-          />
-        </div>
         <div className="texto-contenido">
           <h2 className="titulo-contenido">Nueva tienda online en algunas zonas</h2>
           <p className="descripcion-contenido">
@@ -39,6 +32,13 @@ function Contentsection() {
             zona. Si aún no llegamos, ¡apúntate y te avisamos!
           </p>
           <a href="#avisame" className="enlace-avisame">Avísame</a>
+        </div>
+        <div className="imagen-contenido">
+          <img 
+            src="/images/banner/nueva-tienda.jpeg" 
+            alt="Nueva tienda online" 
+            className="img-contenido"
+          />
         </div>
       </div>
     </section>

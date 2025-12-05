@@ -1,5 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./assets/components/Header";
+import Contentsection from "./assets/components/Contentsection";
+import Aside from "./assets/components/Aside";
+import Footer from "./assets/components/Footer";
 import "./App.css";
 import "./index.css";
 
@@ -7,17 +10,10 @@ import "./index.css";
 
 function Inicio() {
   return (
-    <section className="hero">
-      <div className="hero-image" />
-      <div className="hero-content">
-        <h1 className="hero-title">Empieza tu compra en Mercadona</h1>
-        <p className="hero-subtitle">Introduce tu código postal y dependiendo de tu ciudad accederás a la nueva compra online o a la web clásica.</p>
-        <form className="hero-form">
-          <input className="hero-input" placeholder="Código postal" />
-          <button className="hero-button" type="button">Entrar</button>
-        </form>
-      </div>
-    </section>
+    <>
+      <Aside />
+      <Contentsection />
+    </>
   );
 }
 
@@ -87,6 +83,8 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </main>
+      
+      <Footer />
     </>
   );
 }

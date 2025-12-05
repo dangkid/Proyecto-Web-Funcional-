@@ -1,0 +1,131 @@
+/*-------- BARRA SUPERIOR --------*/
+
+.header {
+  width: 100%;
+  background-color: white;
+}
+
+/*-------- parte superior del header --------*/
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.logo-img {
+  height: 34px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+.lang-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+/*-------- HERO --------*/
+
+.hero {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  background-color: #f8f4ed;
+  min-height: 70vh;
+}
+
+.hero-image {
+  background-image: url("/images/banner/banner-mercadona.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem 3rem 3rem 2rem;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.hero-subtitle {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.hero-form {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.hero-input {
+  flex: 1;
+  padding: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.hero-button {
+  padding: 0.9rem 2rem;
+  border-radius: 6px;
+  background-color: #00993b;
+  color: white;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #007f30;
+}
+
+/*-------- RESPONSIVE --------*/
+
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+
+  .menu-icon {
+    display: inline-flex;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    height: 240px;
+  }
+}

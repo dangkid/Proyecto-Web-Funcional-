@@ -1,23 +1,37 @@
+/**
+ * App principal - Réplica de Mercadona
+ * 
+ * Trabajo realizado por:
+ * - Adriana: Header, Navbar con rutas y Hero section (formulario código postal)
+ * - Oliver: Aside, ContentSection y Footer con estilos responsivos
+ */
+
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./assets/components/Header";
-import Contentsection from "./assets/components/Contentsection";
-import Aside from "./assets/components/Aside";
-import Footer from "./assets/components/Footer";
+import Aside from './assets/components/Aside';
+import Contentsection from './assets/components/Contentsection';
+import Footer from './assets/components/Footer';
 import "./App.css";
 import "./index.css";
-
-
 
 function Inicio() {
   return (
     <>
-      <Aside />
+      <section className="hero">
+        <div className="hero-image" />
+        <div className="hero-content">
+          <h1 className="hero-title">Empieza tu compra en Mercadona</h1>
+          <p className="hero-subtitle">Introduce tu código postal y dependiendo de tu ciudad accederás a la nueva compra online o a la web clásica.</p>
+          <form className="hero-form">
+            <input className="hero-input" placeholder="Código postal" />
+            <button className="hero-button" type="button">Entrar</button>
+          </form>
+        </div>
+      </section>
       <Contentsection />
     </>
   );
 }
-
-
 function Conocenos() {
   return (
     <section className="page">
@@ -66,13 +80,10 @@ function NotFound() {
   );
 }
 
-
-
 function App() {
   return (
     <>
       <Header />
-
       <main>
         <Routes>
           <Route path="/" element={<Inicio />} />
@@ -83,7 +94,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </main>
-      
+      <Aside />
       <Footer />
     </>
   );

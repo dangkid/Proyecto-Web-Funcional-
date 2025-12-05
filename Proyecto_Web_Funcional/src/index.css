@@ -1,38 +1,78 @@
-/*-------- General --------*/
-
-:root {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #213547;
-  background-color: #f8f4ed;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: inherit;
-  text-decoration: none;
-}
+/**
+ * Estilos globales base
+ * Oliver: Variables CSS, reset y utilidades responsive
+ */
 
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #f8f4ed;
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  
+  /* Variables CSS para consistencia en el diseño */
+  --color-primary: #00a650;
+  --color-primary-dark: #008f44;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-background: #ffffff;
+  --color-background-light: #f6f7f6;
+  --max-width: 1400px;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 2rem;
+  --border-radius: 8px;
 }
 
+/* Estilos del body - sin centrado porque usamos nuestro propio layout */
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #ffffff;
+  color: var(--color-text);
+  overflow-x: hidden; /* Previene scroll horizontal */
+}
+
+/* Estilos de enlaces globales */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hacer que las imágenes sean responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Reset de listas */
+ul, ol {
+  list-style: none;
+}
+
+/* Eliminar espacio entre secciones */
 #root {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
   width: 100%;
   min-height: 100vh;
 }
@@ -41,9 +81,56 @@ button {
   font-family: inherit;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #f8f4ed;
+/* Contenedor responsive general */
+.contenedor {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Media queries para contenedor responsive */
+@media (max-width: 1024px) {
+  .contenedor {
+    padding: 0 1.5rem;
   }
 }
+
+@media (max-width: 768px) {
+  .contenedor {
+    padding: 0 1rem;
+  }
+  
+  /* Ajustar tamaños de fuente en móviles */
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor {
+    padding: 0 0.75rem;
+  }
+}
+
+/* Utilidades responsive */
+.ocultar-movil {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .ocultar-movil {
+    display: none;
+  }
+}
+
+.mostrar-movil {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mostrar-movil {
+    display: block;
+  }
+}
+

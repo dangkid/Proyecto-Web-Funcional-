@@ -10,12 +10,22 @@ import "./index.css";
 function Inicio() {
   return (
     <>
+      <section className="hero">
+        <div className="hero-image" />
+        <div className="hero-content">
+          <h1 className="hero-title">Empieza tu compra en Mercadona</h1>
+          <p className="hero-subtitle">Introduce tu código postal y dependiendo de tu ciudad accederás a la nueva compra online o a la web clásica.</p>
+          <form className="hero-form">
+            <input className="hero-input" placeholder="Código postal" />
+            <button className="hero-button" type="button">Entrar</button>
+          </form>
+        </div>
+      </section>
       <Aside />
       <Contentsection />
     </>
   );
 }
-
 function Conocenos() {
   return (
     <section className="page">

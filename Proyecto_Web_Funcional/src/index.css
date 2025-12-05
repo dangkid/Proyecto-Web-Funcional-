@@ -75,6 +75,10 @@ ul, ol {
   min-height: 100vh;
 }
 
+button {
+  font-family: inherit;
+}
+
 /* Contenedor responsive general */
 .contenedor {
   width: 100%;
@@ -127,5 +131,4 @@ ul, ol {
     display: block;
   }
 }
-
 

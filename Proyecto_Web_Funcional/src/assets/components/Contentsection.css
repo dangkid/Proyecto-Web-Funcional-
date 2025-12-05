@@ -15,9 +15,9 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1425px;
-  min-height: 430px;
+  min-height: 398px;
   margin: 0 auto;
-  padding: 64px 128px;
+  padding: 4rem 8rem;
   gap: 4rem;
 }
 
@@ -25,9 +25,9 @@
 .seccion-contenido.invertido {
   flex-direction: row;
   background-color: #f6f7f6;
-  padding: 64px 128px;
+  padding: 4rem 8rem;
   max-width: 100%;
-  min-height: 430px;
+  min-height: 398px;
 }
 
 .seccion-contenido.invertido > * {

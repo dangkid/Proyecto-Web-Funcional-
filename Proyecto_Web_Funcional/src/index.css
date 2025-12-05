@@ -1,18 +1,22 @@
 /* Estilos globales base del proyecto */
 
 /* Reset básico y configuración de fuentes */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 :root {
-  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
   
   /* Variables CSS para consistencia en el diseño */
   --color-primary: #00a650;
@@ -34,7 +38,7 @@ body {
   padding: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: var(--color-background);
+  background-color: #ffffff;
   color: var(--color-text);
   overflow-x: hidden; /* Previene scroll horizontal */
 }
@@ -68,6 +72,7 @@ ul, ol {
   margin: 0;
   padding: 0;
   width: 100%;
+  min-height: 100vh;
 }
 
 /* Contenedor responsive general */

@@ -1,6 +1,8 @@
-/* Estilos globales base del proyecto */
+/**
+ * Estilos globales base
+ * Oliver: Variables CSS, reset y utilidades responsive
+ */
 
-/* Reset básico y configuración de fuentes */
 *,
 *::before,
 *::after {

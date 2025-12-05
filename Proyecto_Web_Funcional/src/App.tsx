@@ -1,3 +1,11 @@
+/**
+ * App principal - Réplica de Mercadona
+ * 
+ * Trabajo realizado por:
+ * - Adriana: Header, Navbar con rutas y Hero section (formulario código postal)
+ * - Oliver: Aside, ContentSection y Footer con estilos responsivos
+ */
+
 import { Routes, Route } from "react-router-dom";
 import { Header } from "./assets/components/Header";
 import Aside from './assets/components/Aside';
@@ -6,7 +14,6 @@ import Footer from './assets/components/Footer';
 import "./App.css";
 import "./index.css";
 
-// Página de inicio - Combina el hero de Adriana con tus componentes Aside y ContentSection
 function Inicio() {
   return (
     <>
@@ -21,7 +28,6 @@ function Inicio() {
           </form>
         </div>
       </section>
-      <Aside />
       <Contentsection />
     </>
   );
@@ -88,6 +94,7 @@ function App() {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </main>
+      <Aside />
       <Footer />
     </>
   );
